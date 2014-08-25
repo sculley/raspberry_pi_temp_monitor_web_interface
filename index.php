@@ -1,4 +1,4 @@
-<?php require($_SERVER['DOCUMENT_ROOT'] . 'assets/php/getTemp.php' ); ?> 
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/assets/php/getTemp.php' ); ?> 
 
 <!DOCTYPE html>
 <html lang="en">
