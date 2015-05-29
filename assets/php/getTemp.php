@@ -3,15 +3,16 @@
 $dbname = ''; // Enter DB Here
 $username = ''; // Enter Username Here
 $password = ''; // Enter Password Here
+$tablename = ''; // Enter table name here
 
 $conn = new PDO("mysql:host=localhost;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 try {
-  $result = $conn->query('SELECT *
-		  FROM $dbname.{table}
+  $result = $conn->query("SELECT *
+		  FROM $dbname.$$tablename
 		  WHERE time > DATE_SUB(NOW(), INTERVAL 24 HOUR)
-		  AND time <= NOW();');
+		  AND time <= NOW();");
   
   $rows = array();
   $table = array();
